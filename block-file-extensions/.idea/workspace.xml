@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="block-file-extensions:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1523c2a5-0ec5-44fc-bca9-3dec7a861a21" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="block-file-extensions" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="38c7aa57-f4a5-4b0f-a855-4d2d6d1261c1" />
+        <option name="url" value="https://github.com/huiji072/block-file-extensions.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Mdpe51N9ApJTUM8xNnwKrVLtp5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/Users/kimhuiji/Desktop/flow-project/block-file-extensions",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/resources/sql" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="BlockFileExtensionsApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.flow.blockfileextensions.BlockFileExtensionsApplication" />
+      <module name="block-file-extensions.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.flow.blockfileextensions.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.BlockFileExtensionsApplication" />
+        <item itemvalue="Application.BlockFileExtensionsApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1523c2a5-0ec5-44fc-bca9-3dec7a861a21" name="Changes" comment="" />
+      <created>1678107406148</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678107406148</updated>
+    </task>
+    <task id="LOCAL-00001" summary="readme 추가">
+      <created>1678231130674</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678231130674</updated>
+    </task>
+    <task id="LOCAL-00002" summary="새로고침 시 체크박스 유지">
+      <created>1678234381994</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678234381994</updated>
+    </task>
+    <task id="LOCAL-00003" summary="커스텀 확장자 동적으로 추가 - 새로고침하지 않아도 바로 보임">
+      <created>1678237853619</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678237853619</updated>
+    </task>
+    <task id="LOCAL-00004" summary="커스텀확장자 [x]버튼 클릭 시 바로 삭제 됨">
+      <created>1678238803385</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678238803385</updated>
+    </task>
+    <task id="LOCAL-00005" summary="sql 수정 중.">
+      <created>1678244245196</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678244245196</updated>
+    </task>
+    <task id="LOCAL-00006" summary="sql문 정상 작동!">
+      <created>1678254951288</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1678254951288</updated>
+    </task>
+    <task id="LOCAL-00007" summary="n/200 새로고침 없이 업데이트">
+      <created>1678258279791</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1678258279791</updated>
+    </task>
+    <task id="LOCAL-00008" summary="배포 파일 생성, 파일 위치 수정">
+      <created>1678264777721</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1678264777721</updated>
+    </task>
+    <task id="LOCAL-00009" summary="gitignore 수정">
+      <created>1678270802085</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1678270802085</updated>
+    </task>
+    <task id="LOCAL-00010" summary="커스텀 확장자 ui 변경">
+      <created>1678292223540</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1678292223540</updated>
+    </task>
+    <task id="LOCAL-00011" summary="error - alert 처리&#10;(name 글자수 제한, 커스텀 확장자의 개수, 중복 커스텀 확장자 제한)">
+      <created>1678331233079</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1678331233079</updated>
+    </task>
+    <task id="LOCAL-00012" summary="tmux 사용">
+      <created>1678345357435</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1678345357436</updated>
+    </task>
+    <task id="LOCAL-00013" summary="코드 리팩토링">
+      <created>1678349951327</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1678349951327</updated>
+    </task>
+    <task id="LOCAL-00014" summary="controller 분리">
+      <created>1678350240929</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1678350240929</updated>
+    </task>
+    <task id="LOCAL-00015" summary="코드 리팩토링">
+      <created>1678351467605</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1678351467605</updated>
+    </task>
+    <task id="LOCAL-00016" summary="errorException handling">
+      <created>1678376122111</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1678376122111</updated>
+    </task>
+    <task id="LOCAL-00017" summary="error - alert 처리">
+      <created>1678376835921</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1678376835921</updated>
+    </task>
+    <task id="LOCAL-00018" summary="error - alert 처리">
+      <created>1678377845852</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1678377845852</updated>
+    </task>
+    <task id="LOCAL-00019" summary="리팩토링 - endpoing명 수정, 변수명 수정">
+      <created>1678407590349</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1678407590349</updated>
+    </task>
+    <task id="LOCAL-00020" summary="customExtension, PinExtension -&gt; Extension">
+      <created>1678415899766</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1678415899766</updated>
+    </task>
+    <task id="LOCAL-00021" summary="sql 쿼리문 수정">
+      <created>1678416230335</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1678416230335</updated>
+    </task>
+    <task id="LOCAL-00022" summary="코드 리팩토링">
+      <created>1678420265001</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1678420265001</updated>
+    </task>
+    <task id="LOCAL-00023" summary="코드 리팩토링">
+      <created>1678429904487</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1678429904488</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="readme 추가" />
+    <MESSAGE value="새로고침 시 체크박스 유지" />
+    <MESSAGE value="커스텀 확장자 동적으로 추가 - 새로고침하지 않아도 바로 보임" />
+    <MESSAGE value="커스텀확장자 [x]버튼 클릭 시 바로 삭제 됨" />
+    <MESSAGE value="sql 수정 중." />
+    <MESSAGE value="sql문 정상 작동!" />
+    <MESSAGE value="n/200 새로고침 없이 업데이트" />
+    <MESSAGE value="배포 파일 생성, 파일 위치 수정" />
+    <MESSAGE value="gitignore 수정" />
+    <MESSAGE value="커스텀 확장자 ui 변경" />
+    <MESSAGE value="error - alert 처리&#10;(name 글자수 제한, 커스텀 확장자의 개수, 중복 커스텀 확장자 제한)" />
+    <MESSAGE value="tmux 사용" />
+    <MESSAGE value="controller 분리" />
+    <MESSAGE value="errorException handling" />
+    <MESSAGE value="error - alert 처리" />
+    <MESSAGE value="리팩토링 - endpoing명 수정, 변수명 수정" />
+    <MESSAGE value="customExtension, PinExtension -&gt; Extension" />
+    <MESSAGE value="sql 쿼리문 수정" />
+    <MESSAGE value="코드 리팩토링" />
+    <option name="LAST_COMMIT_MESSAGE" value="코드 리팩토링" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

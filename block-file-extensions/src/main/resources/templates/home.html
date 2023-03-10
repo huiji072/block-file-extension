@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>파일 확장자 차단</title>
+    <style>
+        .btn-x {
+            background-color: white;
+	        border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- 고정 확장자 -->
+<tr>
+    <td>
+        고정 확장자
+    </td>
+    <td>
+        <th:block th:each="pinExtensions : ${pinExtensionsList}">
+            <label>
+                <input type="checkbox"
+                       th:name="${pinExtensions.name}" th:checked="${!pinExtensions.blocked}"
+                       th:id="'putPinExtension-' + ${pinExtensions.id}">
+                <span th:text="${pinExtensions.name}"></span>
+            </label>
+        </th:block>
+
+    </td>
+</tr>
+
+
+<!-- 커스텀 확장자 -->
+<div>
+    <label>
+        커스텀 확장자
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </label>
+
+    <label>
+        <input type="text" id="input_extension" placeholder="확장자 입력">
+    </label>
+    <button id="btn_upload">+추가</button>
+
+</div>
+
+<div style="border: 1px solid black; padding: 3px; margin: 10px; height: 200px;">
+
+    <label>
+        <table id="customExtensionsTable">
+            <tbody>
+            <p th:text="${customExtensionsListSize}+'/200'" id="customExtensionsListSize"></p>
+            <td th:each="customExtensionsList : ${customExtensionsList}" >
+                <button th:id="'deleteCustomExtension-' + ${customExtensionsList.id}" th:text="${customExtensionsList.name}+'  X'"
+                class="btn-x"></button>
+            </td>
+            </tbody>
+        </table>
+    </label>
+</div>
+
+
+</body>
+</html>
+
+
+<script>
+    $(document).ready(function () {
+
+    // 고정 확장자 - checkbox의 [이름], [체크여부] 전송
+      $('input[type="checkbox"]').change(function() {
+        var id = $(this).attr('id').split('-')[1];
+        var name = $(this).attr('name');
+        var isChecked = $(this).is(':checked');
+        $.ajax({
+          type: 'PUT',
+          url: '/pin-extensions/'+id,
+          data: {
+            name : name,
+            isChecked: isChecked
+          },
+          success: function(response) {
+                console.log(response);
+          },
+          error: function(e) {
+            console.log('에러 발생:', e);
+          }
+        });
+      });
+
+    // 확장자 입력 후  [+추가] 버튼 클릭 시 데이터베이스에 추가
+    $('#btn_upload').click(function(){
+
+      var name = $('#input_extension').val();
+       $.ajax({
+          type: 'POST',
+          url: '/custom-extensions',
+          data: {
+            name : name
+          },
+<!--          데이터베이스에 값이 정상적으로 들어가면 화면에 출력-->
+          success: function(response) {
+                console.log(response);
+                var customExtensions = response;
+
+                var tbody = $('#customExtensionsTable').find('tbody');
+                var td = $('<td></td>');
+                var btn = $('<button></button>').attr('id', 'deleteCustomExtension-' + customExtensions.id)
+                                          .attr('class', 'btn-x')
+                                          .text(customExtensions.name + ' X');
+
+                td.append(btn);
+                $('#customExtensionsTable tbody').append(td);
+
+    <!--              커스텀 확장자 개수/200-->
+                var customExtensionsListSize = parseInt($('#customExtensionsListSize').text());
+                $('#customExtensionsListSize').text(customExtensionsListSize + 1 + '/200');
+
+
+
+          },
+          error: function(e) {
+            alert(e.responseText);
+          }
+        });
+   });
+
+
+<!--   [X] 버튼 클릭 시 해당 커스텀 확장자 삭제-->
+     $('button[id^="deleteCustomExtension-"]').click(function(){
+        var id = $(this).attr('id').split('-')[1];
+        var row = $(this).closest('td');
+
+        $.ajax({
+          type: 'DELETE',
+          url: '/custom-extension/'+id,
+          data: {
+            id : id
+          },
+          success: function(response) {
+<!--          [삭제] 버튼 클릭 시 화면에서 바로 삭제-->
+            row.remove();
+<!--              커스텀 확장자 개수/200-->
+            var customExtensionsListSize = parseInt($('#customExtensionsListSize').text());
+            $('#customExtensionsListSize').text(customExtensionsListSize - 1 + '/200');
+            },
+          error: function(e) {
+            console.log('에러 발생:', e);
+          }
+        });
+   });
+
+})
+</script>
