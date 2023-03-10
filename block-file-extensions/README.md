@@ -1,17 +1,33 @@
 # block-file-extensions
 [마드라스 체크] - flow 서버 개발자 과제(파일 확장자 차단)
 
-노션 링크 첨부 : https://efficient-squirrel-1f7.notion.site/a15a0044db7442b3a773a23e94da98d5
+# 실행
+http://3.37.100.7:8080
 
-application.yml 파일에서
-1차 실행
-ddl-auto: create 
-주석 처리 후
-hbm2ddl.auto: validate 추가 후 재실행
+# 기능
 
-[실행]
-실행위치 : /Users/kimhuiji/Desktop/flow-project_/block-file-extensions/build/libs
+- 고정 확장자 체크박스(새로고침 시 유지)
+- 커스텀 확장자 추가
+- 커스텀 확장자 삭제
+- 커스텀 확장자 개수 표시
 
-scp -i flow-project-ec2-keypair.pem block-file-extensions-0.0.1-SNAPSHOT.jar ubuntu@3.37.100.7:~
+# Error 처리
+- 커스텀 확장자가 1자 이하 20자 이상일 때 alert
+- 커스텀 확장자가 중복일 때 alert
+- 커스텀 확장자가 200개 초과일 때 alert
+
+# 테이블 - Extensions
+### 1. CustomExtensions + PinExtensions VS Extensions
+- Extensions 테이블 하나만 사용하면 고정 확장자인지, 커스텀 확장자인지 여부를 나타내는 필드가 필요
+- 필드 수가 많아질 수록 검색 성능이 저하
+- 하지만 고정 확장자 6개, 커스텀 확장자 최대 200개 이므로 하나의 테이블만 사용하는 것이 더욱 효율적
+
+### 2. is_fixed(boolean) VS ExtensionType(enum)
+- boolean을 타입은 간단하고 빠른 비교가 가능
+- 하지만 동일한 테이블에서 관리하기 때문에 필드가 하나 추가된 셈
+- enum 타입은 별도의 필드가 필요없음
+- enum은 내부적으로 int 타입으로 처리되기 때문에 저장공간이 더욱 효율적
+- 데이터 검색도 더욱 빠르게 처리
+
 
 
