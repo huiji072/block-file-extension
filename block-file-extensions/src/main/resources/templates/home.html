@@ -77,7 +77,7 @@
         var isChecked = $(this).is(':checked');
         $.ajax({
           type: 'PUT',
-          url: '/pin-extensions/'+id,
+          url: '/pin-extensions',
           data: {
             name : name,
             isChecked: isChecked

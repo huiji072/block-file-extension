@@ -11,6 +11,7 @@ public interface ExtensionRepository extends JpaRepository<Extensions, Long> {
     Optional<Extensions> findById(Long id);
     Optional<Extensions> findByName(String name);
     List<Extensions> findByExtensionType(ExtensionType extensionType);
-    long countByExtensionType(ExtensionType extensionType);
+    Long countByExtensionType(ExtensionType extensionType);
+    Long countByName(String name);
     List<Extensions> findAll();
 }

@@ -3,13 +3,16 @@ package com.flow.blockfileextensions.entity;
 import com.flow.blockfileextensions.constant.ExtensionType;
 import com.flow.blockfileextensions.dto.PostExtensionDto;
 import com.flow.blockfileextensions.dto.PutExtensionDto;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
+
 import javax.persistence.*;
 
 @Entity
+@Builder
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "extensions")
 public class Extensions {
     @Id
@@ -20,10 +23,4 @@ public class Extensions {
     @Enumerated(EnumType.STRING)
     private ExtensionType extensionType;
 
-    public static Extensions createCustomExtensions(PostExtensionDto extensionsDto) {
-        Extensions extensions = new Extensions();
-        extensions.setName(extensionsDto.getName());
-        extensions.setBlocked(false);
-        return extensions;
-    }
 }

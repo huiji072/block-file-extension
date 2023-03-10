@@ -77,7 +77,7 @@
         var isChecked = $(this).is(':checked');
         $.ajax({
           type: 'PUT',
-          url: '/pin-extensions/'+id,
+          url: '/pin-extensions',
           data: {
             name : name,
             isChecked: isChecked
@@ -133,6 +133,7 @@
      $('button[id^="deleteCustomExtension-"]').click(function(){
         var id = $(this).attr('id').split('-')[1];
         var row = $(this).closest('td');
+        console.log(id);
 
         $.ajax({
           type: 'DELETE',
