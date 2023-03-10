@@ -1,4 +1,5 @@
 package com.flow.blockfileextensions.contorller;
+import com.flow.blockfileextensions.constant.ExtensionType;
 import com.flow.blockfileextensions.service.ExtensionService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -14,9 +15,9 @@ public class MainController {
 
     @GetMapping("/")
     public String home(Model model) {
-        model.addAttribute("customExtensionsList", extensionService.getCustomExtensionList());
+        model.addAttribute("customExtensionsList", extensionService.getExtensionList(ExtensionType.CUSTOM));
         model.addAttribute("customExtensionsListSize", extensionService.getCustomExtensionCount());
-        model.addAttribute("pinExtensionsList", extensionService.getPinExtensionList());
+        model.addAttribute("pinExtensionsList", extensionService.getExtensionList(ExtensionType.PIN));
         return "home";
     }
 }
