@@ -56,12 +56,8 @@ public class ExtensionService {
         }
     }
 
-    public List<Extensions> getPinExtensionList() {
-        return extensionRepository.findByExtensionType(ExtensionType.PIN);
-    }
-
-    public List<Extensions> getCustomExtensionList() {
-        return extensionRepository.findByExtensionType(ExtensionType.CUSTOM);
+    public List<Extensions> getExtensionList(ExtensionType extensionType) {
+        return extensionRepository.findByExtensionType(extensionType);
     }
 
     public Long getCustomExtensionCount() {
