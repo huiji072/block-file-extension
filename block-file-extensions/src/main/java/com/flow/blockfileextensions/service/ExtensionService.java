@@ -17,7 +17,7 @@ import java.util.List;
 @Slf4j
 @Service
 @RequiredArgsConstructor
-//@Transactional(readOnly = true)
+@Transactional(readOnly = true)
 public class ExtensionService {
     private final ExtensionRepository extensionRepository;
 
@@ -74,6 +74,7 @@ public class ExtensionService {
 //        extensionRepository.deleteById(id);
 //    }
 
+    @Transactional
     public Long deleteCustomExtension(Long id) {
         extensionRepository.deleteById(id);
         return id;
