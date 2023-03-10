@@ -2,8 +2,8 @@ package com.flow.blockfileextensions.service;
 
 import com.flow.blockfileextensions.constant.ExtensionType;
 import com.flow.blockfileextensions.dto.ExtensionView;
-import com.flow.blockfileextensions.dto.PostExtensionDto;
-import com.flow.blockfileextensions.dto.PutExtensionDto;
+import com.flow.blockfileextensions.dto.CreateExtensionDto;
+import com.flow.blockfileextensions.dto.UpdateExtensionDto;
 import com.flow.blockfileextensions.entity.Extensions;
 import com.flow.blockfileextensions.error.handler.CustomException;
 import com.flow.blockfileextensions.error.handler.ErrorCode;
@@ -20,20 +20,20 @@ import java.util.List;
 @Transactional(readOnly = true)
 public class ExtensionService {
     private final ExtensionRepository extensionRepository;
-
+    private final int MAX_SIZE =200;
     @Transactional
-    public void updatePinExtension(PutExtensionDto putExtensionDto) {
-        Extensions extensions = getExtensionByName(putExtensionDto);
-        validPinExtensionCheck(putExtensionDto);
+    public void updatePinExtension(UpdateExtensionDto updateExtensionDto) {
+        Extensions extensions = getExtensionByName(updateExtensionDto);
+        validPinExtensionCheck(updateExtensionDto);
         extensions.setBlocked(!extensions.getBlocked());
     }
-    private Extensions getExtensionByName(PutExtensionDto putExtensionDto) {
-        return extensionRepository.findByName(putExtensionDto.getName())
+    private Extensions getExtensionByName(UpdateExtensionDto updateExtensionDto) {
+        return extensionRepository.findByName(updateExtensionDto.getName())
                 .orElseThrow(() -> new RuntimeException("존재하지 않는 확장자입니다.")
                 );
     }
-    private Extensions validPinExtensionCheck(PutExtensionDto putExtensionDto) {
-        Extensions extensions = getExtensionByName(putExtensionDto);
+    private Extensions validPinExtensionCheck(UpdateExtensionDto updateExtensionDto) {
+        Extensions extensions = getExtensionByName(updateExtensionDto);
         if (extensions.getExtensionType() != ExtensionType.PIN) {
             throw new RuntimeException("고정 확장자가 아닙니다.");
         }
@@ -41,19 +41,19 @@ public class ExtensionService {
     }
 
     @Transactional
-    public ExtensionView saveCustomExtension(PostExtensionDto postExtensionDto) {
-        validCustomExtensionCheck(postExtensionDto);
+    public ExtensionView saveCustomExtension(CreateExtensionDto createExtensionDto) {
+        validCustomExtensionCheck(createExtensionDto);
         return ExtensionView.from(
-                extensionRepository.save(postExtensionDto.toEntity())
+                extensionRepository.save(createExtensionDto.toEntity())
         );
     }
 
-    private void validCustomExtensionCheck(PostExtensionDto extensions) {
+    private void validCustomExtensionCheck(CreateExtensionDto extensions) {
         if (extensionRepository.countByName(extensions.getName()) > 0) {
             throw new CustomException(ErrorCode.ALREADY_SAVED_EXTENSION);
         }
         long customExtensionSize = extensionRepository.countByExtensionType(ExtensionType.CUSTOM);
-        if (customExtensionSize >= 200) {
+        if (customExtensionSize >= MAX_SIZE) {
             throw new CustomException(ErrorCode.INVALID_EXTENSION_COUNT);
         }
     }
@@ -70,19 +70,14 @@ public class ExtensionService {
         return extensionRepository.countByExtensionType(ExtensionType.CUSTOM);
     }
 
-//    public void deleteCustomExtension(Long id) {
-//        extensionRepository.deleteById(id);
-//    }
-
     @Transactional
-    public Long deleteCustomExtension(Long id) {
+    public void deleteCustomExtension(Long id) {
         extensionRepository.deleteById(id);
-        return id;
     }
 
     private Extensions getExtensionById(Long id) {
-        return extensionRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("존재하지 않는 확장자입니다.")
+        return extensionRepository.findById(id).orElseThrow(
+                () -> new RuntimeException("존재하지 않는 확장자입니다.")
         );
     }
 }

@@ -5,14 +5,15 @@ import com.flow.blockfileextensions.entity.Extensions;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.Column;
 import javax.validation.constraints.Size;
 
 @Getter
 @Setter
-public class PostExtensionDto {
+public class CreateExtensionDto {
+    @Column(unique = true)
     @Size(min = 1, max = 20, message = "1자 이상 20자 이하로 입력해주세요.")
     private String name;
-    private ExtensionType extensionType;
 
     public Extensions toEntity() {
         return Extensions.builder()
