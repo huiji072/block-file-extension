@@ -24,7 +24,7 @@ public class ExtensionService {
     @Transactional
     public void updatePinExtension(UpdateExtensionDto updateExtensionDto) {
         Extensions extensions = getExtensionByName(updateExtensionDto);
-        validPinExtensionCheck(updateExtensionDto);
+        validPinExtensionCheck(extensions);
         extensions.setBlocked(!extensions.getBlocked());
     }
     private Extensions getExtensionByName(UpdateExtensionDto updateExtensionDto) {
@@ -32,12 +32,10 @@ public class ExtensionService {
                 .orElseThrow(() -> new RuntimeException("존재하지 않는 확장자입니다.")
                 );
     }
-    private Extensions validPinExtensionCheck(UpdateExtensionDto updateExtensionDto) {
-        Extensions extensions = getExtensionByName(updateExtensionDto);
+    private void validPinExtensionCheck(Extensions extensions) {
         if (extensions.getExtensionType() != ExtensionType.PIN) {
             throw new RuntimeException("고정 확장자가 아닙니다.");
         }
-        return extensions;
     }
 
     @Transactional
