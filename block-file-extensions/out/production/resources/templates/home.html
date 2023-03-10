@@ -133,7 +133,6 @@
      $('button[id^="deleteCustomExtension-"]').click(function(){
         var id = $(this).attr('id').split('-')[1];
         var row = $(this).closest('td');
-        console.log(id);
 
         $.ajax({
           type: 'DELETE',

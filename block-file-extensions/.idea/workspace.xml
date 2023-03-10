@@ -9,24 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1523c2a5-0ec5-44fc-bca9-3dec7a861a21" name="Changes" comment="upload">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/flow/blockfileextensions/dto/ExtensionView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/flow/blockfileextensions/contorller/ExtensionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/flow/blockfileextensions/contorller/ExtensionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/flow/blockfileextensions/dto/PostExtensionDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/flow/blockfileextensions/dto/PostExtensionDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/flow/blockfileextensions/dto/PutExtensionDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/flow/blockfileextensions/dto/PutExtensionDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/flow/blockfileextensions/entity/Extensions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/flow/blockfileextensions/entity/Extensions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/flow/blockfileextensions/repository/ExtensionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/flow/blockfileextensions/repository/ExtensionRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/flow/blockfileextensions/service/ExtensionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/flow/blockfileextensions/service/ExtensionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/flow/blockfileextensions/contorller/ExtensionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flow/blockfileextensions/contorller/ExtensionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/flow/blockfileextensions/dto/PostExtensionDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flow/blockfileextensions/dto/PostExtensionDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/flow/blockfileextensions/dto/PutExtensionDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flow/blockfileextensions/dto/PutExtensionDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/flow/blockfileextensions/entity/Extensions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flow/blockfileextensions/entity/Extensions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/flow/blockfileextensions/repository/ExtensionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flow/blockfileextensions/repository/ExtensionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/flow/blockfileextensions/service/ExtensionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flow/blockfileextensions/service/ExtensionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
-    </list>
+    <list default="true" id="1523c2a5-0ec5-44fc-bca9-3dec7a861a21" name="Changes" comment="코드 리팩토링" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,18 +55,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "history": [
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
     {
-      "state": "OPEN",
-      "author": "huiji072"
+      &quot;state&quot;: &quot;OPEN&quot;,
+      &quot;author&quot;: &quot;huiji072&quot;
     }
   ],
-  "lastFilter": {
-    "state": "OPEN",
-    "author": "huiji072"
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;author&quot;: &quot;huiji072&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -312,7 +295,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678429904488</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="코드 리팩토링">
+      <created>1678439678503</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1678439678503</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
